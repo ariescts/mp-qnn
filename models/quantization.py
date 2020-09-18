@@ -200,7 +200,7 @@ class WeightDorefaQuantization(nn.Module):
 # network layer part
 
 class Clamp(nn.Module):
-    def __init__(self, upper=6):
+    def __init__(self, upper=1):
         super(Clamp, self).__init__()
         self.upper = upper
 
@@ -209,7 +209,7 @@ class Clamp(nn.Module):
 
 
 class Hardtanh6(nn.Module):
-    def __init__(self, min_val=-6, max_val=6, inplace=True):
+    def __init__(self, min_val=-1, max_val=1, inplace=True):
         super().__init__()
         self.min_val = min_val
         self.max_val = max_val
